@@ -12,12 +12,14 @@ class Ball:
             Ball.image = load_image('ball21x21.png')
         self.x = x if x else random.randint(100, 1180)
         self.y = y if y else random.randint(100, 924)
-        self.x = clamp(50, self.x, common.court.w - 51)
-        self.y = clamp(50, self.y, common.court.h - 51)
+        # self.x = clamp(50, self.x, common.court.w - 51)
+        # self.y = clamp(50, self.y, common.court.h - 51)
 
     def draw(self):
-        self.image.draw(self.x, self.y)
-        draw_rectangle(*self.get_bb())
+        sx = self.x - common.court.window_left
+        sy = self.y - common.court.window_bottom
+        self.image.draw(sx, sy)
+        # draw_rectangle(*self.get_bb())
 
     def update(self):
         pass
