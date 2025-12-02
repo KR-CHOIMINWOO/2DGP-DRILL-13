@@ -2,6 +2,7 @@ from pico2d import *
 import game_world
 import game_framework
 import random
+import common
 
 class Ball:
     image = None
@@ -11,6 +12,8 @@ class Ball:
             Ball.image = load_image('ball21x21.png')
         self.x = x if x else random.randint(100, 1180)
         self.y = y if y else random.randint(100, 924)
+        self.x = clamp(50, self.x, common.court.w - 51)
+        self.y = clamp(50, self.y, common.court.h - 51)
 
     def draw(self):
         self.image.draw(self.x, self.y)
