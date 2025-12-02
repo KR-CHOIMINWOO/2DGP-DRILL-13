@@ -26,5 +26,3 @@ class Ball:
         match group:
             case 'boy:ball':
                 game_world.remove_object(self)
-            case 'zombie:ball':
-                game_world.remove_object(self)
