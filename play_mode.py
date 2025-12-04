@@ -8,7 +8,9 @@ import game_world
 import common
 
 from boy import Boy
-from court import Court
+# from court import Court
+# from court import InfiniteCourt as Court
+from court import TileCourt as Court
 from ball import Ball
 
 
@@ -32,10 +34,10 @@ def init():
     game_world.add_object(common.boy, 1)
     game_world.add_collision_pair('boy:ball', common.boy, None)
 
-    balls = [Ball() for _ in range(100)]
-    for ball in balls:
-        game_world.add_object(ball, 1)
-        game_world.add_collision_pair('boy:ball', None, ball)
+    # balls = [Ball() for _ in range(100)]
+    # for ball in balls:
+    #     game_world.add_object(ball, 1)
+    #     game_world.add_collision_pair('boy:ball', None, ball)
 
 def finish():
     game_world.clear()

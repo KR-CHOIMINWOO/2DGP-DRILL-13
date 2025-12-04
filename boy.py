@@ -124,8 +124,8 @@ class Boy:
         self.state_machine.update()
         # self.x = clamp(common.court.cw / 2, self.x, common.court.w - common.court.cw / 2)
         # self.y = clamp(common.court.ch / 2, self.y, common.court.w - common.court.ch / 2)
-        self.x = clamp(50, self.x, common.court.w - 51)
-        self.y = clamp(50, self.y, common.court.h - 51)
+        # self.x = clamp(50, self.x, common.court.w - 51)
+        # self.y = clamp(50, self.y, common.court.h - 51)
 
     def handle_event(self, event):
         if event.key in (SDLK_LEFT, SDLK_RIGHT, SDLK_UP, SDLK_DOWN):
